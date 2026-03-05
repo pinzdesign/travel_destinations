@@ -1,0 +1,31 @@
+<div class="destination-card">
+
+    <h3>{{ d.name }}</h3>
+
+    <p><strong>Country:</strong> {{ d.country }}</p>
+
+    <p>{{ d.description }}</p>
+
+    <small>
+        Added by <b>{{ d.author }}</b> • {{ d.time_ago }}
+    </small>
+
+    {% if logged_user_id and logged_user_id == d.author_id %}
+        <div class="destination-actions">
+
+            <button
+                class="edit-destination"
+                data-id="{{ d.id }}">
+                Edit
+            </button>
+
+            <button
+                class="delete-destination"
+                data-id="{{ d.id }}">
+                Delete
+            </button>
+
+        </div>
+    {% endif %}
+
+</div>

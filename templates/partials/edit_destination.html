@@ -1,0 +1,13 @@
+<h2>Edit Destination</h2>
+
+<form id="editDestinationForm" data-id="{{ destination_id }}">
+
+    <input name="destination_name" placeholder="Destination name" value="{{ destination.destination_name }}">
+    <input name="destination_country" placeholder="Country" value="{{ destination.destination_country }}">
+    <textarea name="destination_desc" placeholder="Description">{{ destination.destination_desc }}</textarea>
+
+    <button type="submit">Save Changes</button>
+
+</form>
+
+<p id="editDestinationMessage"></p>
