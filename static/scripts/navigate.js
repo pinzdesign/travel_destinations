@@ -17,7 +17,7 @@ export default function navigate(e) {
         let url;
         if (e) {
             const target = e.target;
-            if (!target)
+            if (!(target instanceof Element))
                 return;
             const anchor = target.closest("a");
             if (!anchor)

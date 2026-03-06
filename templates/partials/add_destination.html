@@ -6,9 +6,15 @@
     </div>
 
     <form id="addDestinationForm">
-        <input name="destination_name" placeholder="Destination name">
-        <input name="destination_country" placeholder="Country">
-        <textarea name="destination_desc" placeholder="Description"></textarea>
+        <label for="destination_name">Destination</label>
+        <input type="text" name="destination_name" placeholder="Destination name">
+
+        <label for="destination_country">Country</label>
+        <input type="text" name="destination_country" placeholder="Country">
+
+        <label for="destination_desc">Description</label>
+        <textarea rows="10" name="destination_desc" placeholder="Description"></textarea>
+
         <button type="submit">Add Destination</button>
     </form>
 

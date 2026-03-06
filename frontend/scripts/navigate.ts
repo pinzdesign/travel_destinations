@@ -7,8 +7,9 @@ export default async function navigate(e?: Event): Promise<void> {
     let url: string;
 
     if (e) {
-        const target = e.target as HTMLElement | null;
-        if (!target) return;
+        const target = e.target;
+
+        if (!(target instanceof Element)) return;
 
         const anchor = target.closest("a") as HTMLAnchorElement | null;
         if (!anchor) return;

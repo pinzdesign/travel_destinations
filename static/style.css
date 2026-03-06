@@ -1,4 +1,166 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+    letter-spacing: 1px;
+    font-size: 18px;
+    color: darkgray;
+    line-height: 25px;
+}
+
+body {
+    background-image: url("img/bg.png");
+    background-repeat: no-repeat;
+}
+
+a {
+    color: darkgray;
+}
+
+a:hover {
+    color: black;
+}
+
+h1 {
+    margin-bottom: 30px;
+    font-family: "Pacifico", cursive;
+    color: white;
+    font-size: 38px;
+    text-shadow: 1px 1px 1px lightgray;
+}
+
+h2, h3 {
+    margin-bottom: 15px;
+    color: chocolate /*rgb(85, 85, 85)*/;
+}
+
+h3 {
+    margin-bottom: 0;
+}
+
+address {
+    margin-top: 30px;
+    text-align: center;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: rgb(220, 220, 220);
+    border: 0;
+    border-radius: 8px;
+    margin-top: 30px;
+    transition: all .3s;
+}
+
+input[type=text], input[type=password], input[type=email], textarea {
+    border: 1px solid lightgray;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.edit-destination:hover, button:hover {
+    background-color: green;
+    color: white;
+}
+
+.delete-destination:hover {
+    background-color: red;
+    color: white;
+}
+
+.wrapper {
+    margin: 100px auto;
+    width: 1200px;
+}
+
+.mainMenu_wrapper {
+    background-color: #d2d2d226;
+    border-radius: 15px;
+    box-shadow: 3px 3px 5px rgba(0,0,0,0.1);
+}
+
 .mainMenu {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+
+    li {
+        list-style-type: none;
+        text-align: center;
+        margin: 20px;
+    }
+
+    a {
+        padding: 15px 35px;
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration:underline;
+    }
+}
+
+.destinations {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.destination-card {
+    padding: 30px;
+    border: 1px solid lightgray;
+    border-radius: 15px;
+    transition: all .3s;
+    background-color: white;
+
+    .dc-country {
+        margin-bottom: 15px;
+        font-size: 12px;
+    }
+
+    .dc-desc {
+        color: rgb(190, 190, 190);
+    }
+
+    small {
+        font-size: 12px;
+    }
+}
+
+.destination-card:hover {
+    box-shadow: 3px 3px 5px rgba(0,0,0,0.1);
+}
+
+#addDestinationForm {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    gap: 30px;
+}
+
+#addDestinationWrapper, #profile {
+    margin-top: 30px;
+    background-color: white;
+    padding: 30px;
+    border: 1px solid lightgray;
+    border-radius: 15px;
+}
+
+#login, #signup {
+    margin: 30px auto;
+    width: 600px;
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid lightgray;
+
+    #loginForm, #signupForm {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    input[type=text], input[type=password] {
+        margin-bottom: 15px;
+    }
 }

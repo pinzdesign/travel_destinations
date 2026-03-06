@@ -1,15 +1,24 @@
-<h2>Sign Up</h2>
-
 <div id="alreadyLoggedMessage" style="display:none;">
     <p>You are already logged in. Logout before creating another account.</p>
 </div>
 
-<form id="signupForm">
-    <input name="new_username" placeholder="Username">
-    <input name="new_email" placeholder="Email">
-    <input name="new_password" type="password" placeholder="Password">
-    <input name="new_passwordConfirm" type="password" placeholder="Confirm Password">
-    <button type="submit">Sign Up</button>
-</form>
+<div id="signup">
+    <h2>Sign Up</h2>
+    <form id="signupForm">
+        <label for="new_username">Choose username</label>
+        <input name="new_username" type="text" placeholder="Username">
+
+        <label for="new_username">Your Email</label>
+        <input name="new_email" type="text" placeholder="Email">
+
+        <label for="new_username">Choose password</label>
+        <input name="new_password" type="password" placeholder="Password">
+
+        <label for="new_username">Confirm password</label>
+        <input name="new_passwordConfirm" type="password" placeholder="Confirm Password">
+
+        <button type="submit">Sign Up</button>
+    </form>
+</div>
 
 <p id="signupMessage"></p>
