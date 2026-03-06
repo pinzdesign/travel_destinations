@@ -25,6 +25,15 @@ Users can only view destinations, while registered users can log in and add new 
 
 ---
 
+## Installation
+
+clone the repository
+```
+github clone *repository url*
+```
+
+---
+
 ## How It Works
 
 I created a simple SPA navigation system. Instead of reloading the page, the client fetches HTML partials and injects them into the main content area.
