@@ -27,22 +27,34 @@ Users can only view destinations, while registered users can log in and add new 
 
 ## Installation
 
-clone the repository
+1. Clone the repository
 ```
 github clone *repository url*
 ```
+2. Start Docker
+3. Open terminal and run
+```
+docker compose up --build
+```
+4. Project will install packages (might be too long, it will install node, might need to check Dockerfile)
+5. Containers in Docker will appear
+6. Import database tables in travel_destinations.sql into database
+7. Run at localhost/
+
+Database user: root
+Database password: password
 
 ---
 
 ## How It Works
 
-I created a simple SPA navigation system. Instead of reloading the page, the client fetches HTML partials and injects them into the main content area.
-I am not using mixhtml, as i wanted to develop my own SPA architecture, and play around with fetch etc.
-I am sending raw json (instead of form data), and receiving json as response from backend as well.
-Authentication is handled with JWT tokens. When a user logs in, the server returns a token that is stored in the browser's local storage. This token is then included in future requests to access protected routes.
-I use backend validation with constraints for allowed character amount, as well as checking value for being empty.
-I have created a scipt which shows how long ago a destination was added (by using a unix timestamp)
-I use mysql JOIN to get a user name, based on relation between destination author id, and user id.
+* I created a simple SPA navigation system. Instead of reloading the page, the client fetches HTML partials and injects them into the main content area.
+* I am not using mixhtml, as i wanted to develop my own SPA architecture, and play around with fetch etc.
+* I am sending raw json (instead of form data), and receiving json as response from backend as well.
+* Authentication is handled with JWT tokens. When a user logs in, the server returns a token that is stored in the browser's local storage. This token is then included in future requests to access protected routes.
+* I use backend validation with constraints for allowed character amount, as well as checking value for being empty.
+* I have created a scipt which shows how long ago a destination was added (by using a unix timestamp)
+* I use mysql JOIN to get a user name, based on relation between destination author id, and user id.
 
 Pages restricted depending on login state:
 
